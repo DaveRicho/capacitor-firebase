@@ -32,8 +32,8 @@ public class FirebaseAppCheck {
             this.appCheckInstance.installAppCheckProviderFactory(DebugAppCheckProviderFactory.getInstance(), isTokenAutoRefreshEnabled);
         } else {
             this.appCheckInstance.installAppCheckProviderFactory(
-                    PlayIntegrityAppCheckProviderFactory.getInstance(),
-                    isTokenAutoRefreshEnabled
+                    PlayIntegrityAppCheckProviderFactory.getInstance()
+                    // isTokenAutoRefreshEnabled
                 );
         }
     }
