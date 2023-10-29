@@ -31,10 +31,13 @@ public class FirebaseAppCheck {
         if (debug) {
             this.appCheckInstance.installAppCheckProviderFactory(DebugAppCheckProviderFactory.getInstance(), isTokenAutoRefreshEnabled);
         } else {
+            // this.appCheckInstance.installAppCheckProviderFactory(
+            //         PlayIntegrityAppCheckProviderFactory.getInstance()
+            //         // isTokenAutoRefreshEnabled
+            //     );
             this.appCheckInstance.installAppCheckProviderFactory(
-                    PlayIntegrityAppCheckProviderFactory.getInstance()
-                    // isTokenAutoRefreshEnabled
-                );
+                    SafetyNetAppCheckProviderFactory.getInstance()
+            );
         }
     }
 
